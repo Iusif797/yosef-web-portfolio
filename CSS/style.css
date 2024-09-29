@@ -1,0 +1,537 @@
+/* Подключение шрифта Lobster */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../IMG/WALPAPER.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header, #intro, #projects, .form-container, footer, #android-apps, #business-cards {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    opacity: 0.9;
+    transition: opacity 0.5s ease;
+}
+
+.logo img:hover {
+    opacity: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Социальные кнопки */
+.social-button.whatsapp {
+    background-color: rgba(37, 211, 102, 0.9);
+}
+
+.social-button.telegram {
+    background-color: rgba(0, 136, 204, 0.9);
+}
+
+.social-button.facebook {
+    background-color: rgba(59, 89, 152, 0.9);
+}
+
+.social-button.instagram {
+    background: radial-gradient(circle at 30% 107%, rgba(253, 244, 151, 0.9) 0%, rgba(253, 244, 151, 0.9) 5%, rgba(253, 89, 73, 0.9) 45%, rgba(214, 36, 159, 0.9) 60%, rgba(40, 90, 235, 0.9) 90%);
+}
+
+nav ul li a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a.whatsapp:hover {
+    background-color: #25D366;
+}
+
+nav ul li a.telegram:hover {
+    background-color: #0088cc;
+}
+
+nav ul li a.facebook:hover {
+    background-color: #3b5998;
+}
+
+nav ul li a.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Вступительная секция */
+#intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#intro h1 {
+    font-size: 2.5em;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#intro button {
+    padding: 15px 30px;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    cursor: pointer;
+    animation: fadeIn 1.5s ease-in-out;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#intro button:hover {
+    background-color: #21a1f1;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Общие стили для разделов */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: black;
+    margin-bottom: 30px;
+    min-height: 50px; /* Чтобы избежать сдвига контента */
+    display: inline-block;
+}
+
+section h2 span {
+    display: inline-block;
+}
+
+/* Центрирование заголовков */
+section h2 {
+    text-align: center;
+}
+
+/* Проекты */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Раздел Android приложений */
+#android-apps {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+#android-apps .project img {
+    height: 300px;
+}
+
+/* Раздел Бизнес-визиток */
+#business-cards {
+    background: rgba(240, 240, 240, 0.9);
+    color: #333;
+}
+
+#business-cards .project img {
+    height: 250px;
+    object-position: top; /* Отображение верхней части изображения */
+}
+
+/* Раздел Сайты */
+#projects {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+#projects .project img {
+    height: 200px;
+}
+
+/* Специальный стиль для rentcar.jpg */
+#projects .top-image {
+    object-position: top; /* Отображение верхней части изображения */
+}
+
+/* Форма заявки */
+.form-container {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s ease;
+    animation: fadeInForm 1s ease-in-out;
+}
+
+.form-container:hover {
+    transform: perspective(1000px) rotateY(10deg);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    min-height: 50px; /* Чтобы избежать сдвига контента */
+}
+
+.form-container label,
+.form-container button {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input:focus {
+    background: rgba(255, 255, 255, 1);
+}
+
+.form-container button {
+    padding: 15px;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #21a1f1;
+    transform: translateY(-2px);
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Сообщение об успешной отправке */
+#success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#success-message.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: relative;
+}
+
+/* Стили для всплывающего окна */
+.popup-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.popup-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close-popup {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Медиа-запросы для адаптации под мобильные устройства */
+/* Удалены изменения расположения проектов для мобильных устройств, чтобы сохранить расположение изображений как на компьютере */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #intro h1 {
+        font-size: 1.8em;
+    }
+
+    #intro p {
+        font-size: 1em;
+    }
+
+    #intro button {
+        padding: 10px 20px;
+    }
+
+    /* Сохраняем сетку проектов без изменений */
+
+    .form-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5em;
+    }
+
+    .form-container label,
+    .form-container button {
+        font-size: 1em;
+    }
+
+    .form-container input {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        margin-bottom: 20px;
+    }
+
+    #intro {
+        padding: 60px 15px;
+    }
+
+    #intro h1 {
+        font-size: 1.5em;
+    }
+
+    #intro p {
+        font-size: 0.9em;
+    }
+
+    #intro button {
+        padding: 8px 16px;
+    }
+
+    .form-container {
+        width: calc(100% - 30px);
+        padding: 20px 15px;
+    }
+
+    .form-container h2 {
+        font-size: 1.2em;
+    }
+
+    .form-container label,
+    .form-container button {
+        font-size: 0.9em;
+    }
+
+    .form-container input {
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        justify-items: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
